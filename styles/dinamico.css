@@ -1,0 +1,173 @@
+:root {
+    --primary-color: #fd460a; /* Naranja */
+    --secondary-color: #2440fb; /* Azul */
+    --tertiary-color: #000; /* Amarillo */
+}
+
+.dinamica{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white
+}
+
+
+/* Contenedor principal que contiene el editor y la imagen */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+@media(min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+/* Propiedades de ambos contenedores (editor y imagen) */
+.editor-container, .image-container {
+    position: relative;
+    width: 100%;
+    outline: 2px solid #fd460a; /* Segundo borde */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    height: 300px;
+    margin-bottom: 10px; /* Espaciado entre el contenedor y los botones */
+}
+
+.editor-container {
+    flex: 1;
+}
+
+.image-container {
+    flex: 1;
+}
+
+/* El texto editable */
+.editor {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor[contenteditable="false"] {
+    user-select: none;
+}
+
+/* Imagen dentro del contenedor */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+}
+
+/* Botones debajo de cada contenedor */
+.button-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button-section button {
+    font-family: "Comfortaa", sans-serif;
+    color: rgb(0, 0, 0);
+    border-radius: 34px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid var(--primary-color);
+    transition: box-shadow 0.4s ease-out, transform 0.4s ease-out, color 0.4s ease-out;
+}
+
+.button-section button:hover {
+    background-color: var(--primary-color);
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Ocultar el input de archivo */
+.image-upload {
+    display: none;
+}
+
+/* Definición de propiedades personalizadas */
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8%;
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 14%;
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(235.58823529411765, 100%, 34%, 1);
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8.719997119443487%;
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 48.44259262873665%;
+}
+
+/* Animación del gradiente */
+@keyframes hero-gradient-animation {
+    0% {
+        --y-0: 8%;
+        --x-0: 14%;
+        --c-0: hsla(235.58823529411765, 100%, 34%, 1);
+        --s-start-0: 8.719997119443487%;
+        --s-end-0: 48.44259262873665%;
+    }
+    100% {
+        --y-0: 82%;
+        --x-0: 91%;
+        --c-0: hsla(246.17647058823525, 96%, 37%, 1);
+        --s-start-0: 10.100304948634562%;
+        --s-end-0: 37.18516324948311%;
+    }
+}
+
+/* Selector para el fondo dinámico */
+.dynamic-background {
+    --y-0: 8%;
+    --x-0: 14%;
+    --c-0: hsla(235.58823529411765, 100%, 34%, 1);
+    --s-start-0: 8.719997119443487%;
+    --s-end-0: 48.44259262873665%;
+    
+    background-color: hsla(217.00000000000006, 0%, 0%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0));
+    animation: hero-gradient-animation 15s linear infinite alternate;
+    background-blend-mode: normal;
+}
