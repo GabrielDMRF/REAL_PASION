@@ -1,7 +1,8 @@
 :root {
     --primary-color: #fd460a; /* Naranja */
     --secondary-color: #2440fb; /* Azul */
-    --tertiary-color: #f1fe33; /* Amarillo */
+    --tertiary-color: #000 ; /* negro */
+    --quaternary-color: #f1fe33; /* Amarillo */
 }
 
 * {
@@ -13,10 +14,13 @@
 body {
     font-family: "Comfortaa", sans-serif;
     line-height: 1.6;
-    background-color: #cbcaca;
     height: 100vh;
     overflow-x: hidden;
-    
+}
+
+.linea1{
+    background-color: white;
+    padding: 30px;
 }
 
 /* Slider de patrocinadores */
@@ -219,6 +223,8 @@ body {
     border-color: var(--primary-color);
 }
 
+
+
 .register {
     border-color: var(--secondary-color);
 }
@@ -416,4 +422,78 @@ body {
 .footer-button:hover {
     background-color: var(--primary-color);
     color: white;
+}
+
+
+
+
+
+.divider-container {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.divider-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: var(--tertiary-color);
+    transform: translateY(-50%);
+}
+
+.divider-element {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    animation: moveDot 8s infinite alternate ease-in-out;
+}
+
+.element-1 {
+    background-color: var(--primary-color);
+    left: -30px;
+    animation-delay: 0s;
+}
+
+.element-2 {
+    background-color: var(--secondary-color);
+    left: -30px;
+    animation-delay: 2s;
+}
+
+.element-3 {
+    background-color: var(--quaternary-color);
+    left: -30px;
+    animation-delay: 4s;
+}
+
+@keyframes moveDot {
+    0% {
+        left: -30px;
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.5);
+    }
+    100% {
+        left: calc(100% + 30px);
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .divider-container {
+        height: 40px;
+    }
+    .divider-element {
+        width: 20px;
+        height: 20px;
+    }
 }

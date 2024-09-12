@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/slider.css">
     <link rel="stylesheet" href="./styles/publi.css">
-    <link rel="stylesheet" href="./styles/dinamico.css">
+    <link rel="stylesheet" href="./styles/pricing.css">
+    <link rel="stylesheet" href="./styles/icons.css">
+    <link rel="stylesheet" href="./styles/news.css">
 </head>
 <body>
-
 <header>
     <!-- Slider de patrocinadores -->
     <div id="sponsor-slider" class="slider">
@@ -53,7 +54,9 @@
             </ul>
             <div class="btns-lg">
                 <button class="login">Ingresar</button>
-                <button class="register">Unirse</button>
+                <a class="registro" href="./registro.html">
+                        <button class="register">Unirse</button>
+                </a> 
             </div>
             <div class="redes">
                 <a href="https://www.facebook.com/" target="_blank">
@@ -69,6 +72,8 @@
         </div>
     </nav>
 </header>
+
+
 
 <!-- Anuncios -->
 <div class="anuncios-container">
@@ -192,52 +197,213 @@
 </div>
 
 
-<div class="dynamic-background">
-  <div class="dinamica">
-    <!-- Contenedor principal que contiene el editor y la imagen -->
-      <div class="container">
-        <!-- Contenedor para el editor de texto -->
-        <div class="editor-container">
-            <div class="editor" id="editableDiv" contenteditable="false">
-                <h2>Añade una sugerencia</h2>
-                <p>Ajusta el texto aquí cuando habilites la edición, agrega una imagen respecto a lo que deseas sugerir.</p>
+<div class="divider-container">
+    <div class="divider-line"></div>
+    <div class="divider-element element-1"></div>
+    <div class="divider-element element-2"></div>
+    <div class="divider-element element-3"></div>
+</div>
+
+
+
+
+<div class="container-icons">
+    <section class="creative-cards style-one">
+        <div class="container">
+            <div class="row">
+                <div class="card-column">
+                    <div class="card-details orange-hover">
+                        <div class="card-icons">
+                            <img class="light-icon" src="./img/users-svgrepo-com.svg" alt="icon" />
+                        </div>
+                        <h3><a href="">Sobre Nosotros</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectne auctor aliquet. Aenean sollicitudi bibendum auctor.</p>
+                    </div>
+                </div>
+                <div class="card-column">
+                    <div class="card-details blue-hover">
+                        <div class="card-icons">
+                            <img class="light-icon" src="./img/comment-alt-question-svgrepo-com.svg" alt="icon" />
+                        </div>
+                        <h3><a href="">Que Hacemos</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectne auctor aliquet. Aenean sollicitudi bibendum auctor.</p>
+                    </div>
+                </div>
+                <div class="card-column">
+                    <div class="card-details yellow-hover">
+                        <div class="card-icons">
+                            <img class="light-icon" src="./img/locate-svgrepo-com.svg" alt="icon" />
+                        </div>
+                        <h3><a href="">Ubicación</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectne auctor aliquet. Aenean sollicitudi bibendum auctor.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <!-- Contenedor para la imagen -->
-        <div class="image-container">
-            <img id="editableImage" src="./img/imagen.png" alt="Imagen editable">
-        </div>
-    </div>
-
-    <div class="contenedor-botones">
-        <!-- Botones para el editor de texto -->
-        <div class="button-section">
-            <button id="editTextButton" onclick="toggleEdit()">Editar texto</button>
-            <button id="confirmTextButton" onclick="confirmEdit()" style="display:none;">Confirmar</button>
-        </div>
-    
-        <!-- Botones para la imagen -->
-        <div class="button-section">
-            <input type="file" id="imageInput" class="image-upload" accept="image/*">
-            <button onclick="document.getElementById('imageInput').click()">Subir Imagen</button>
-        </div>
-    </div>
-</div>
+    </section>
 </div>
 
 
-<footer class="footer">
-  <div class="footer-content">
-      <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
-      <div class="footer-buttons">
-          <a href="#contacto" class="footer-button">Contacto</a>
-          <a href="#privacidad" class="footer-button">Política de Privacidad</a>
-      </div>
-  </div>
-</footer>
+
+<div class="divider-container">
+    <div class="divider-line"></div>
+    <div class="divider-element element-1"></div>
+    <div class="divider-element element-2"></div>
+    <div class="divider-element element-3"></div>
+</div>
+
+<div class="bg-wrapper">
+    <div class="content-wrapper">
+  
+        <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">Titulo 1</h2>
+            <div class="news-card__post-date">julio 29, 2024</div>
+            <div class="news-card__details-wrapper">
+            <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio, pariatur&hellip;</p>
+            <a href="#" class="news-card__read-more">Ver más<i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+        </div>
+        </div>
+    
+        <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="https://images.pexels.com/photos/978695/pexels-photo-978695.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">Titulo 2</h2>
+            <div class="news-card__post-date">julio 29, 2024</div>
+            <div class="news-card__details-wrapper">
+            <p class="news-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati ex natus nulla rem sequi laborum quod fugit&hellip;</p>
+            <a href="#" class="news-card__read-more">Ver más<i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+        </div>
+        </div>
+    
+        <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="https://images.pexels.com/photos/1198174/pexels-photo-1198174.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">Titulo 3</h2>
+            <div class="news-card__post-date">julio 29, 2024</div>
+            <div class="news-card__details-wrapper">
+            <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae&hellip;</p>
+            <a href="#" class="news-card__read-more">Ver más<i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+        </div>
+        </div>
+    
+        <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="https://images.pexels.com/photos/296302/pexels-photo-296302.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">Titulo 4</h2>
+            <div class="news-card__post-date">julio 29, 2024</div>
+            <div class="news-card__details-wrapper">
+            <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi, expedita at, ea optio dolore debitis fugit odio atque minima est, eaque voluptate iste animi autem. At deserunt nostrum rerum!</p>
+            <a href="#" class="news-card__read-more">Ver más<i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+        </div>
+        </div>
+    
+        <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="https://images.pexels.com/photos/1277396/pexels-photo-1277396.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">Titulo 5</h2>
+            <div class="news-card__post-date">julio 29, 2024</div>
+            <div class="news-card__details-wrapper">
+            <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio&hellip;</p>
+            <a href="#" class="news-card__read-more">Ver más<i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+        </div>
+        </div>
+    
+        <div class="news-card">
+        <a href="#" class="news-card__card-link"></a>
+        <img src="https://images.pexels.com/photos/27486717/pexels-photo-27486717/free-photo-of-futbol.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="news-card__image">
+        <div class="news-card__text-wrapper">
+            <h2 class="news-card__title">Titulo 6</h2>
+            <div class="news-card__post-date">julio 29, 2024</div>
+            <div class="news-card__details-wrapper">
+            <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia.</p>
+            <a href="#" class="news-card__read-more">Ver más<i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+        </div>
+        </div>
+  
+    </div>
+</div>
+
+  <div class="divider-container">
+    <div class="divider-line"></div>
+    <div class="divider-element element-1"></div>
+    <div class="divider-element element-2"></div>
+    <div class="divider-element element-3"></div>
+</div>
 
 
+
+    <div class="main-flow">
+        <h1 class="main__heading">Precios</h1>
+        <div class="main__cards cards">
+        <div class="cards__inner">
+            <div class="cards__card card">
+            <h2 class="card__heading">Basico</h2>
+            <p class="card__price">$9.99</p>
+            <ul role="list" class="card__bullets flow">
+                <li>Acceso a entrenamientos estándar y planes de nutrición</li>
+                <li>Soporte por correo electrónico</li>
+            </ul>
+            <a href="#basic" class="card__cta cta">Comenzar</a>
+            </div>
+    
+            <div class="cards__card card">
+            <h2 class="card__heading">Pro</h2>
+            <p class="card__price">$19.99</p>
+            <ul role="list" class="card__bullets flow">
+                <li>Acceso a entrenamientos avanzados y planes de nutrición</li>
+                <li>Soporte prioritario por correo electrónico</li>
+                <li>Acceso exclusivo a sesiones de preguntas y respuestas en vivo</li>
+            </ul>
+            <a href="#pro" class="card__cta cta">Actualizar a Pro</a>
+            </div>
+    
+            <div class="cards__card card">
+            <h2 class="card__heading">Ultimate</h2>
+            <p class="card__price">$29.99</p>
+            <ul role="list" class="card__bullets flow">
+                <li>Acceso a todos los entrenamientos premium y planes de nutrición</li>
+                <li>Soporte prioritario 24/7</li>
+                <li>Sesión de coaching virtual 1 a 1 cada mes</li>
+                <li>Contenido exclusivo y acceso anticipado a nuevas funciones</li>
+            </ul>
+            <a href="#ultimate" class="card__cta cta">Ir a Ultimate</a>
+            </div>
+        </div>
+        
+        <div class="overlay cards__inner"></div>
+        </div>
+    </div>
+
+    <div class="divider-container">
+        <div class="divider-line"></div>
+        <div class="divider-element element-1"></div>
+        <div class="divider-element element-2"></div>
+        <div class="divider-element element-3"></div>
+    </div>
+
+
+    <footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        <div class="footer-buttons">
+            <a href="#contacto" class="footer-button">Contacto</a>
+            <a href="#privacidad" class="footer-button">Política de Privacidad</a>
+        </div>
+    </div>
+    </footer>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -245,7 +411,8 @@
 <script src="./scripts/slider-m.js"></script>
 <script src="./scripts/publicidad.js"></script>
 <script src="./scripts/scroll.js"></script>
-<script src="./scripts/dinamico.js"></script>
+<script src="./scripts/pricing.js"></script>
+<script src="./scripts/loader.js"></script>
 <script src="//code.tidio.co/cd9idsnl8zurs84ssnqwddklfirlcyzc.js" async></script>
 </body>
 </html>

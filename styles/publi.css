@@ -8,14 +8,15 @@
 .anuncio-publicidad-container {
   background-color: black; /* Fondo negro */
   width: 100%; /* Cubre todo el ancho */
-  padding: 20px 0; /* Espacio arriba y abajo */
+  padding: 30px ; /* Espacio arriba y abajo */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .anuncio-publicidad {
   display: flex;
   justify-content: center; /* Centra horizontalmente los elementos hijos */
   flex-wrap: wrap; /* Permite que los elementos hijos se ajusten a varias líneas si es necesario */
-  gap: 20px; /* Espacio entre los elementos */
+  gap: 100px; /* Espacio entre los elementos */
   max-width: 1200px; /* Ajusta según el diseño deseado */
   margin: 0 auto; /* Centra el contenedor en la página */
 }

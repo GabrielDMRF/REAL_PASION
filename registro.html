@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./styles/regis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!-- Modal que se mostrará al enviar los datos correctamente -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2>¡Éxito!</h2>
+            <p>Datos enviados correctamente.</p>
+            <button onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <p>Este correo ya esta registrado.</p>
+            <button onclick="cerrarModal2()">Cerrar</button>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="insert.php" method="post">
+                <h1 class="cuenta1">Crear cuenta</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>o use un correo para registrarse</span>
+                <input type="text" name="nombre" placeholder="Nombre" />
+                <input type="email" name="correo" placeholder="Correo electrónico" />
+                <input type="password" name="contraseña" placeholder="Contraseña" />
+                <button type="submit">Únete</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <div class="container-btn">
+                <a class="" href="./index.html"><button class="btn-atras">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                </a>
+            </div>
+            <form action="#">
+                <h1>Iniciar sesión</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>o use su cuenta</span>
+                <input type="email" placeholder="Correo electrónico" />
+                <input type="password" placeholder="Contraseña" />
+                <a href="#">Olvidaste tu contraseña?</a>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>¡Bienvenido!</h1>
+                    <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
+                    <button class="ghost" id="signIn">Iniciar sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>¡Hola!</h1>
+                    <p>Introduce tus datos personales y comienza tu viaje con nosotros</p>
+                    <button class="ghost" id="signUp">Únete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>a</p>
+    </footer>
+    <script src="./scripts/register-validation.js"></script>
+    <script src="./scripts/ventana-flotante.js"></script>
+</body>
+</html>
