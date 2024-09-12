@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #fd460a; /* Naranja */
+    --secondary-color: #2440fb; /* Azul */
+    --tertiary-color: #000 ; /* negro */
+    --quaternary-color: #f1fe33; /* Amarillo */
+}
 
 .divider-container {
     width: 100%;
